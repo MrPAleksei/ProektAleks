@@ -40,6 +40,7 @@ gem 'devise'
 
 gem 'draper'
 
+gem  'will_paginate' ,  '~> 3.1.0'
 
 gem 'bootsnap', '>= 1.4.2', require: false
 
