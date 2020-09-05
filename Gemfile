@@ -31,10 +31,16 @@ gem 'bootstrap', '~> 5.0.0.alpha1'
 gem 'tether-rails'
 
 gem 'carrierwave', '~> 2.0'
+
 gem "mini_magick"
+
 gem 'trix'
+
 gem 'devise'
 
+gem 'draper'
+
+gem  'will_paginate' ,  '~> 3.1.0'
 
 gem 'bootsnap', '>= 1.4.2', require: false
 

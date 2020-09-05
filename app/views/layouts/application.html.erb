@@ -11,20 +11,32 @@
 
   <body>
     <div class="container">
-      <nav class="navbar-nav list-inline" style="background-color: #dede8c;">
-        <nav class="navbar navbar-light bg-faded">
-          <ul class="nav navbar-nav list-inline">
+      <nav class="navbar navbar-light" style="background-color: #dede8c;">
+          <ul class="nav navbar-nav, list-inline">
             <li class="nav-item active">
               <a class="nav-link" href="<%= posts_path %>">Статьи</a>
             </li>
-          </ul>
-          <ul class="nav navbar-nav list-inlinet">
             <li class="nav-item">
               <a class="nav-link" href="#">Контакты</a>
             </li>
           </ul>
+          
           <%= link_to 'Новая статья', new_post_path, class: 'btn btn-outline-primary pull-xs-right' %>
-        </nav>
+
+        <ul class="nav navbar-nav, list-inline, centr">
+          <% if user_signed_in? %>
+          <li class="nav-item">
+            <%= link_to "Выход", destroy_user_session_path, method: :delete, class: "nav-link"%> 
+          </li>
+          <% else %>
+          <li class="nav-item">
+            <%= link_to "Вход", new_user_session_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Регистрация", new_user_registration_path, class: "nav-link" %>
+          </li>
+          <% end %>
+        </ul>
      </nav>
     </div>
 
